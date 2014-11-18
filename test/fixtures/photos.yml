@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path: MyString
+  x: 1
+  'y': 1
+  z: 1
+  theta: 1.5
+
+two:
+  path: MyString
+  x: 1
+  'y': 1
+  z: 1
+  theta: 1.5
