@@ -22,15 +22,29 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
       right: false
   }
 
+  $scope.existMap = {
+      northwest: false,
+      north: false,
+      northeast: false,
+      west: false,
+      center: false,
+      east: false,
+      southwest: false,
+      south: false,
+      southeast: false
+  }
+
   # 初期画像取得
   $scope.photo = fetchMapInfo.fetch_photo_with($scope.col,
                                                $scope.theta).query()
   $scope.hasPhoto = fetchMapInfo.feel_all_around($scope.col).query()
+  $scope.existMap = fetchMapInfo.map_get($scope.col).query()
 
   updateMapInfo = () ->
       $scope.photo = fetchMapInfo.fetch_photo_with($scope.col,
                                                    $scope.theta).query()
       $scope.hasPhoto = fetchMapInfo.feel_all_around($scope.col).query()
+      $scope.existMap = fetchMapInfo.map_get($scope.col).query()
 
   moveTo = (direction) ->
     switch direction

@@ -30,6 +30,24 @@
         <li>x: {{col.x}}</li>
         <li>y: {{col.y}}</li>
         <li>z: {{col.z}}</li>
+   
+      
+      <table border="1">
+  	<tr>
+   	  <td width="25"><img src="images/maru.png" ng-show="existMap.northwest"></td>
+   	  <td width="25"><img src="images/maru.png" ng-show="existMap.north"></td>
+          <td width="25"><img src="images/maru.png" ng-show="existMap.northeast"></td>
+  	</tr>
+  	<tr>
+	  <td width="25"><img src="images/maru.png" ng-show="existMap.west"></td>
+   	  <td width="25"><img src="images/hoshi.png"></td>
+          <td width="25"><img src="images/maru.png" ng-show="existMap.east"></td>
+  	</tr>
+        <tr>
+          <td width="25"><img src="images/maru.png" ng-show="existMap.southwest"></td>
+          <td width="25"><img src="images/maru.png" ng-show="existMap.south"></td>
+          <td width="25"><img src="images/maru.png" ng-show="existMap.southeast"></td>
+      </table>
     </div>
   </body>
 </html>

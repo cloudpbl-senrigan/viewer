@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'maps/index'
   get 'maps/fetchPhoto/:x/:y/:z/:theta' => 'maps#fetch_photo'
   get 'maps/feelAllAround/:x/:y/:z' => 'maps#feel_all_around'
+  get 'maps/map_get/:x/:y/:z' => 'maps#map_get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
