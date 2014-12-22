@@ -11,16 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141117064303) do
+ActiveRecord::Schema.define(version: 20141222042921) do
 
-  create_table "photos", force: true do |t|
+  create_table "image_master_table", primary_key: "image_id", force: true do |t|
+    t.string    "path",                                         null: false
+    t.float     "latitude",          limit: 53,                 null: false
+    t.float     "longitude",         limit: 53,                 null: false
+    t.float     "height",            limit: 53,                 null: false
+    t.float     "row",               limit: 53,                 null: false
+    t.float     "pitch",             limit: 53,                 null: false
+    t.float     "yaw",               limit: 53,                 null: false
+    t.integer   "image_size_height",                            null: false
+    t.integer   "image_size_width",                             null: false
+    t.timestamp "created_date"
+    t.boolean   "converted",                    default: false
+  end
+
+  create_table "image_processed_tables", force: true do |t|
     t.string   "path"
     t.integer  "x"
     t.integer  "y"
     t.integer  "z"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "create_date"
+    t.datetime "taken_date"
     t.integer  "theta"
+    t.integer  "height"
+    t.integer  "width"
+    t.integer  "source_image_ids"
   end
 
 end

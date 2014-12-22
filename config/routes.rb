@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "top#index"
   get 'maps/index'
   get 'maps/fetchPhoto/:x/:y/:z/:theta' => 'maps#fetch_photo'
   get 'maps/feelAllAround/:x/:y/:z' => 'maps#feel_all_around'
