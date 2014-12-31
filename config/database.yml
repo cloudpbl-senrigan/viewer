@@ -26,9 +26,10 @@ development:
   host: localhost
   database: senrigan_database
   pool: 5
-  username: viewer_dev
-  password: senrigan
-  socket: /var/run/mysqld/mysqld.sock
+  #username: viewer_dev
+  #password: senrigan
+  #socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
   timeout: 5000
 
 

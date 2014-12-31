@@ -13,20 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20141222042921) do
 
-  create_table "image_master_table", primary_key: "image_id", force: true do |t|
-    t.string    "path",                                         null: false
-    t.float     "latitude",          limit: 53,                 null: false
-    t.float     "longitude",         limit: 53,                 null: false
-    t.float     "height",            limit: 53,                 null: false
-    t.float     "row",               limit: 53,                 null: false
-    t.float     "pitch",             limit: 53,                 null: false
-    t.float     "yaw",               limit: 53,                 null: false
-    t.integer   "image_size_height",                            null: false
-    t.integer   "image_size_width",                             null: false
-    t.timestamp "created_date"
-    t.boolean   "converted",                    default: false
-  end
-
   create_table "image_processed_tables", force: true do |t|
     t.string   "path"
     t.integer  "x"

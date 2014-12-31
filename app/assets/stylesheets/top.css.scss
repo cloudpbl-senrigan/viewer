@@ -1,3 +1,25 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#parameter-box {
+    display:none;
+}
+.view-display img{
+    margin:0 auto;
+    width:100%;
+    height:100%;
+}
+
+#controller {
+    margin:0 auto;
+    text-align:center;
+}
+
+#controller ul {
+    list-style-type: none;
+}
+
+#controller table {
+    margin: 0 auto;
+}
+

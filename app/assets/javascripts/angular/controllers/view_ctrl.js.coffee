@@ -7,6 +7,7 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
     z: 0
   }
   $scope.theta = 0
+  $scope.counter = 0
 
   $scope.direction = {
       forward: true,
@@ -41,6 +42,7 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
   $scope.existMap = fetchMapInfo.map_get($scope.col).query()
 
   updateMapInfo = () ->
+      $scope.counter = $scope.counter + 1
       $scope.photo = fetchMapInfo.fetch_photo_with($scope.col,
                                                    $scope.theta).query()
       $scope.hasPhoto = fetchMapInfo.feel_all_around($scope.col).query()

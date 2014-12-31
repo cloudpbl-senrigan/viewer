@@ -14,10 +14,7 @@
   </head>
 
   <body>
-    <div ng-controller="ViewCtrl">
-      <div class="display" id="front">
-        <img class="photo" src={{photo.path}} />
-      </div>
+    <div id="controller" ng-controller="ViewCtrl">
       <button class="btn" ng-click="turnLeft()">Turn left</button>
       <button class="btn" ng-click="turnRight()">Turn right</button>
       <br />
@@ -31,7 +28,15 @@
         <li>x: {{col.x}}</li>
         <li>y: {{col.y}}</li>
         <li>z: {{col.z}}</li>
-   
+      </ul>  
+
+      <div id="parameter-box">
+        <p id="counter">{{counter}}</p>
+        <p id="x">{{col.x}}</p>
+        <p id="y">{{col.y}}</p>
+        <p id="z">{{col.z}}</p>
+        <p id="theta">{{theta}}</p>
+      </div>
       
       <table border="1">
   	<tr>
