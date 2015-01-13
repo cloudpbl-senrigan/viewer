@@ -22,8 +22,6 @@
       <button class="btn" ng-show="hasPhoto.back" ng-click="goBack()">Back</button>
       <button class="btn" ng-show="hasPhoto.left" ng-click="goLeft()">Left</button>
       <button class="btn" ng-show="hasPhoto.right" ng-click="goRight()">Right</button>
-      <br />
-      <img class="arrow" src="images/triangle.png" style="transform: rotate({{theta}}deg);"/>
       <ul>
         <li>x: {{col.x}}</li>
         <li>y: {{col.y}}</li>
@@ -37,22 +35,157 @@
         <p id="z">{{col.z}}</p>
         <p id="theta">{{theta}}</p>
       </div>
-      
+     
+      <div>
+          <input type="text" size=10 ng-model="getlati">
+          <input type="text" size=10 ng-model="getlong">
+          <button ng-click="changezahyou(getlati, getlong)">ワープ</button>
+      </div>
+ 
       <table border="1">
   	<tr>
-   	  <td width="25"><img src="images/maru.png" ng-show="existMap.northwest"></td>
-   	  <td width="25"><img src="images/maru.png" ng-show="existMap.north"></td>
-          <td width="25"><img src="images/maru.png" ng-show="existMap.northeast"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.aa"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ab"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ac"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ad"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ae"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.af"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ag"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ah"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ai"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.aj"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ak"></td>
   	</tr>
   	<tr>
-	  <td width="25"><img src="images/maru.png" ng-show="existMap.west"></td>
-   	  <td width="25"><img src="images/hoshi.png"></td>
-          <td width="25"><img src="images/maru.png" ng-show="existMap.east"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ba"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.bb"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.bc"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.bd"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.be"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.bf"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.bg"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.bh"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.bi"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.bj"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.bk"></td>
   	</tr>
         <tr>
-          <td width="25"><img src="images/maru.png" ng-show="existMap.southwest"></td>
-          <td width="25"><img src="images/maru.png" ng-show="existMap.south"></td>
-          <td width="25"><img src="images/maru.png" ng-show="existMap.southeast"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ca"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.cb"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.cc"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.cd"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ce"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.cf"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.cg"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ch"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ci"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.cj"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ck"></td>
+        </tr>
+	<tr>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.da"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.db"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.dc"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.dd"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.de"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.df"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.dg"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.dh"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.di"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.dj"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.dk"></td>
+        </tr>
+	<tr>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ea"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.eb"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ec"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ed"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ee"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ef"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.eg"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.eh"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ei"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ej"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ek"></td>
+        </tr>
+	<tr>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fa"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fb"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fc"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fd"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fe"></td>
+          <td  width="25" height="25"><img src="images/yaji.png" style="transform: rotate({{theta}}deg);"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fg"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fh"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fi"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fj"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.fk"></td>
+        </tr>
+	<tr>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ga"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.gb"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.gc"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.gd"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ge"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.gf"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.gg"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.gh"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.gi"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.gj"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.gk"></td>
+        </tr>
+	<tr>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ha"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.hb"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.hc"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.hd"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.he"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.hf"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.hg"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.hh"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.hi"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.hj"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.hk"></td>
+        </tr>
+	<tr>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iia"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iib"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iic"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iid"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iie"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iif"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iig"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iih"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iii"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iij"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.iik"></td>
+        </tr>
+	<tr>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ja"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.jb"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.jc"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.jd"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.je"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.jf"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.jg"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.jh"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ji"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.jj"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.jk"></td>
+        </tr>
+	<tr>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ka"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.kb"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.kc"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.kd"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ke"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.kf"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.kg"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.kh"></td>
+          <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.ki"></td>
+	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.kj"></td>
+   	  <td  width="25" height="25"><img src="images/maru.png" ng-show="existMap.kk"></td>
+        </tr>
       </table>
     </div>
   </body>

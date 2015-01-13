@@ -12,5 +12,6 @@ class CreateImageProcessedTables < ActiveRecord::Migration
       t.integer "width"
       t.integer "source_image_ids"
     end
+    add_index :image_processed_tables, [:x, :y, :z], :unique => true
   end
 end

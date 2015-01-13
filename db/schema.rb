@@ -26,4 +26,6 @@ ActiveRecord::Schema.define(version: 20141222042921) do
     t.integer  "source_image_ids"
   end
 
+  add_index "image_processed_tables", ["x", "y", "z"], name: "index_image_processed_tables_on_x_and_y_and_z", unique: true, using: :btree
+
 end

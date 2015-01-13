@@ -13,10 +13,10 @@ default: &default
   adapter: mysql2
   encoding: utf8
   host: localhost
-  database: development
+  database: senrigandb
   pool: 5
-  username: viewer_dev
-  password: senrigan
+  username: root
+  password: senrigan_daisuki
   socket: /var/run/mysqld/mysqld.sock
   timeout: 5000
 
@@ -24,10 +24,10 @@ development:
   adapter: mysql2
   encoding: utf8
   host: localhost
-  database: senrigan_database
+  database: senrigandb
   pool: 5
-  username: viewer_dev
-  password: senrigan
+  username: root
+  password: senrigan_daisuki
   socket: /var/run/mysqld/mysqld.sock
   timeout: 5000
 
@@ -42,8 +42,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: senrigan_database
+  database: senrigandb
 
 production:
   <<: *default
-  database: senrigan_database
+  database: senrigandb
