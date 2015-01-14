@@ -73,6 +73,10 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
       when "right"
         $scope.col.x += 1
         $scope.theta = 90
+  
+  changeTomesh = (lati, long) ->
+    $scope.col.x = lati
+    $scope.col.y = long
 
   turnTo = (direction) ->
     switch direction
@@ -101,8 +105,7 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
       turnTo("right")
       updateMapInfo()
   $scope.changezahyou = (getlati, getlong) ->
-      $scope.col.x = parseInt($scope.getlati, 10)
-      $scope.col.y = parseInt($scope.getlong, 10)
+      changeTomesh(parseInt($scope.getlati, 10), parseInt($scope.getlong, 10))
       updateMapInfo()
 
 ]
