@@ -27,4 +27,6 @@ ActiveRecord::Schema.define(version: 20150109043103) do
     t.boolean   "converted",                    default: false
   end
 
+  add_index "image_processed_tables", ["x", "y", "z"], name: "index_image_processed_tables_on_x_and_y_and_z", unique: true, using: :btree
+
 end

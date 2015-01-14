@@ -1,7 +1,13 @@
 App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
 ($scope, fetchMapInfo) ->
   # パラメータ宣言
-  $scope.col = {
+  # とりあえず東京大学工学部2号館を初期位置に
+  #$scope.col = {
+  #  x: 139.761586,
+  #  y: 35.714231,
+  #  z: 0
+  #}
+  $scope.col={
     x: 0,
     y: 0,
     z: 0
@@ -38,6 +44,7 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
      ja: false, jb: false, jc: false, jd: false, je: false, jf:false, jg: false, jh: false, ji: false, jj: false, jk: false,
      ka: false, kb: false, kc: false, kd: false, ke: false, kf:false, kg: false, kh: false, ki: false, kj: false, kk: false
   }
+#  $scope.existMap =[]
 
   # 初期画像取得
   $scope.photo = fetchMapInfo.fetch_photo_with($scope.col,
@@ -66,7 +73,7 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
       when "right"
         $scope.col.x += 1
         $scope.theta = 90
-
+  
   changeTomesh = (long, lati) ->
     $scope.col.x = Math.floor(long / 0.000010966382364)
     $scope.col.y = Math.floor(lati / 0.000008983148616)
