@@ -15,17 +15,16 @@
 
   <body>
     <div id="controller" ng-controller="ViewCtrl">
-      <button class="btn" ng-click="turnLeft()">Turn left</button>
-      <button class="btn" ng-click="turnRight()">Turn right</button>
+      <button class="btn" accesskey="i" ng-click="turnLeft()">Turn left(Alt+Shift+i in firefox)</button>
+      <button class="btn" accesskey="m" ng-click="turnRight()">Turn right(Alt+Shift+m)</button>
       <br />
-      <button class="btn" ng-show="hasPhoto.forward" ng-click="goForward()">Forward</button>
-      <button class="btn" ng-show="hasPhoto.back" ng-click="goBack()">Back</button>
-      <button class="btn" ng-show="hasPhoto.left" ng-click="goLeft()">Left</button>
-      <button class="btn" ng-show="hasPhoto.right" ng-click="goRight()">Right</button>
+      <button class="btn" accesskey="k" ng-show="hasPhoto.forward" ng-click="goForward()">Forward(Alt+Shift+k)</button>
+      <button class="btn" accesskey="j" ng-show="hasPhoto.back" ng-click="goBack()">Back(Alt+Shift+j)</button>
+      <button class="btn" accesskey="h" ng-show="hasPhoto.left" ng-click="goLeft()">Left(Alt+Shift+h)</button>
+      <button class="btn" accesskey="l" ng-show="hasPhoto.right" ng-click="goRight()">Right(Alt+Shift+l)</button>
       <ul>
         <li>x: {{col.x}}</li>
         <li>y: {{col.y}}</li>
-        <li>z: {{col.z}}</li>
       </ul>  
 
       <div id="parameter-box">
@@ -37,9 +36,9 @@
       </div>
      
       <div>
-          <input type="text" size=10 ng-model="getlati">
           <input type="text" size=10 ng-model="getlong">
-          <button ng-click="changezahyou(getlati, getlong)">ワープ</button>
+          <input type="text" size=10 ng-model="getlati">
+          <button ng-click="changezahyou(getlong, getlati)">ワープ</button>
       </div>
  
       <table border="1">
