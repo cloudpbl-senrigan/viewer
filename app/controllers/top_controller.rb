@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class TopController < ApplicationController
 
   def index
@@ -6,6 +7,7 @@ class TopController < ApplicationController
   def display
     @photo = generate_photo(ImageProcessedTable.find_by(x: params[:x], y: params[:y], z: params[:z], theta: params[:theta]))
     @direction = params[:direction]
+    @photo_path = "/images/#{File.basename(@photo.path)}"
   end
 
   def init

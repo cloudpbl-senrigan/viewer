@@ -6,6 +6,8 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
     y: 0,
     z: 0
   }
+  $scope.getlati = 0
+  $scope.getlong = 0
   $scope.theta = 0
   $scope.counter = 0
 
@@ -24,15 +26,17 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
   }
 
   $scope.existMap = {
-      northwest: false,
-      north: false,
-      northeast: false,
-      west: false,
-      center: false,
-      east: false,
-      southwest: false,
-      south: false,
-      southeast: false
+     aa: false, ab: false, ac: false, ad: false, ae: false, af: false, ag: false, ah: false, ai: false, aj: false, ak: false,
+     ba: false, bb: false, bc: false, bd: false, be: false, bf: false, bg: false, bh: false, bi: false, bj: false, bk: false,
+     ca: false, cb: false, cc: false, cd: false, ce: false, cf: false, cg: false, ch: false, ci: false, cj: false, ck: false,
+     da: false, db: false, dc: false, dd: false, de: false, df: false, dg: false, dh: false, di: false, dj: false, dk: false,
+     ea: false, eb: false, ec: false, ed: false, ee: false, ef: false, eg: false, eh: false, ei: false, ej: false, ek: false,
+     fa: false, fb: false, fc: false, fd: false, fe: false, ff: false, fg: false, fh: false, fi: false, fj: false, fk: false,
+     ga: false, gb: false, gc: false, gd: false, ge: false, gf: false, gg: false, gh: false, gi: false, gj: false, gk: false,
+     ha: false, hb: false, hc: false, hd: false, he: false, hf: false, hg: false, hh: false, hi: false, hj: false, hk: false,
+     iia: false, iib: false, iic: false, iid: false, iie: false, iif: false, iig: false, iih: false, iii: false, iij: false, iik: false,
+     ja: false, jb: false, jc: false, jd: false, je: false, jf:false, jg: false, jh: false, ji: false, jj: false, jk: false,
+     ka: false, kb: false, kc: false, kd: false, ke: false, kf:false, kg: false, kh: false, ki: false, kj: false, kk: false
   }
 
   # 初期画像取得
@@ -63,6 +67,10 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
         $scope.col.x += 1
         $scope.theta = 90
 
+  changeTomesh = (long, lati) ->
+    $scope.col.x = Math.floor(long / 0.000010966382364)
+    $scope.col.y = Math.floor(lati / 0.000008983148616)
+
   turnTo = (direction) ->
     switch direction
       when "left"
@@ -89,4 +97,8 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
   $scope.turnRight = ->
       turnTo("right")
       updateMapInfo()
+  $scope.changezahyou = (getlong, getlati) ->
+      changeTomesh(parseFloat($scope.getlong), parseFloat($scope.getlati))
+      updateMapInfo()
+
 ]
