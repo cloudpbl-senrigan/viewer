@@ -16,7 +16,6 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
   $scope.getlong = 0
   $scope.theta = 0
   $scope.counter = 0
-  $scope.pressKey = 0
 
   $scope.direction = {
       forward: true,
@@ -78,17 +77,6 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
   changeTomesh = (long, lati) ->
     $scope.col.x = long / 0.000010966382364
     $scope.col.y = lati / 0.000008983148616
-
-  moveKeyboard = (event) ->
-    switch event.which
-      when "37"
-        moveTo("left")
-      when "38"
-        moveTo("forward")
-      when "39"
-        moveTo("right")
-      when "40"
-        moveTo("back")
 
   turnTo = (direction) ->
     switch direction
