@@ -36,9 +36,11 @@
       </div>
 
       <div>
+	<form ng-submit="handleKeydown()">
           <input type="text" size=10 ng-model="getlong">
           <input type="text" size=10 ng-model="getlati">
           <button ng-click="changezahyou(getlong, getlati)">ワープ</button>
+	</form>
       </div>
 
       <table border="1">

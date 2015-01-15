@@ -84,6 +84,9 @@ App.controller "ViewCtrl", ["$scope", "fetchMapInfo",
         $scope.theta = ($scope.theta + 270) % 360
       when "right"
         $scope.theta = ($scope.theta + 90) % 360
+
+  handleKeydown  = () ->
+    changeTomesh(getlong, getlati)
   
   # ボタン処理の部分
   $scope.goForward = ->
